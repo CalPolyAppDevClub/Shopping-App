@@ -1,5 +1,3 @@
-
-
 import Foundation
 class User: Hashable {
     private let username: String
