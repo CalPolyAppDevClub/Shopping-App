@@ -3,6 +3,9 @@
 import Foundation
 class User: Hashable {
     private let username: String
+    var hashValue: Int {
+        return 1
+    }
     init(username: String) {
         self.username = username
     }

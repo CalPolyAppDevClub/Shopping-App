@@ -7,9 +7,9 @@ class APIWrapper {
 
     }
     
-    func getLikes(item: Item, callback: (Array<String>) -> ()) {
+    //func getLikes(item: Item, callback: (Array<String>) -> ()) {
         
-    }
+    //}
     
     
     //error: String
@@ -47,6 +47,14 @@ class APIWrapper {
     
     //error: String
     func removeFriend(user: User, callback: (String?) -> ()) {
+        
+    }
+    
+    func addReview(review: Review, callback: (String?) -> ()) {
+        
+    }
+    
+    func getReviews(item: Item, amount: Int, callback: (Array<Review>) -> ()) {
         
     }
 }
