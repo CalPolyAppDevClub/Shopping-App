@@ -4,7 +4,7 @@ class APIWrapper {
     var currentUser: String?
     var users = [User:String]()
     func getItems(numItems: Int, callback: (Array<Item>)->()) {
-
+        //GET /items {i}
     }
     
     //func getLikes(item: Item, callback: (Array<String>) -> ()) {
