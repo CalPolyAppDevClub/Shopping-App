@@ -3,6 +3,7 @@ import Foundation
 class APIWrapper {
     var currentUser: String?
     var users = [User:String]()
+    var items = [Item:String]()
     func getItems(numItems: Int, callback: (Array<Item>)->()) {
         //GET /items {i}
     }
