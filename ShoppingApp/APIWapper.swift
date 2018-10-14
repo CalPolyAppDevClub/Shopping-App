@@ -2,7 +2,7 @@
 import Foundation
 class APIWrapper {
     var currentUser: String?
-    var userIdentifier: [User:String] = [User:String]()
+    var users = [User:String]()
     func getItems(numItems: Int, callback: (Array<Item>)->()) {
 
     }
@@ -13,13 +13,13 @@ class APIWrapper {
     
     
     //error: String
-    func buy(item: Item, callback: (String?)->()) {
+    func buy(item: Item, callback: (String?) -> ()) {
         
     }
     
     
     //error: String
-    func like(item: Item, callback: (String?)->()) {
+    func like(item: Item, callback: (String?) -> ()) {
         
     }
     
@@ -35,7 +35,7 @@ class APIWrapper {
         for user in users {
             let userId = user["id"]!
             let username = user["username"]!
-            self.userIdentifier[User(username: username)] = userId
+            self.users[User(username: username)] = userId
         }
         
     }
@@ -49,7 +49,4 @@ class APIWrapper {
     func removeFriend(user: User, callback: (String?) -> ()) {
         
     }
-    
-    
-    
 }
