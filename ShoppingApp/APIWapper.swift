@@ -1,12 +1,156 @@
-
 import Foundation
 class APIWrapper {
+    
+    private var person1 = [
+    "id" : "514",
+    "friends" : [
+    "515",
+    "516",
+    "517",
+    "518",
+    "519",
+    "520",
+    "521",
+    "522",
+    "523",
+    "524"
+    ],
+    "name" : "abcd",
+    "likes" : [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h"
+    ],
+        ] as [String : Any]
+    
+    private var person2 = [
+    "id" : "515",
+    "friends" : [
+    "514",
+    "516",
+    "517",
+    "518",
+    "519",
+    "520",
+    "521",
+    "522",
+    "523",
+    "524"
+    ],
+    "name" : "abdc",
+    "likes" : [
+    "a"
+    ]
+        ] as [String : Any]
+    
+    private var person3 = [
+    "id" : "516",
+    "friends" : [
+    "514",
+    "515",
+    "517",
+    "518"
+    ],
+    "name" : "acbd",
+    "likes" : [
+    "a",
+    "b",
+    "c",
+    "d"
+    ]
+        ] as [String : Any]
+    
+    private var person4 = [
+    "id" : "517",
+    "friends" : [
+    "514",
+    "515",
+    "516",
+    "518",
+    "519",
+    "520"
+    ],
+    "name" : "acdb",
+    "likes" : [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f"
+    ]
+        ] as [String : Any]
+    
+    private var person5 = [
+    "id" : "518",
+    "friends" : [
+    "514",
+    "515",
+    "516",
+    "517",
+    "519"
+    ],
+    "name" : "adbc",
+    "likes" : [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e"
+    ]
+        ] as [String : Any]
+    
+    private var person6 = [
+    "id" : "519",
+    "friends" : [
+    ],
+    "name" : "adcb",
+    "likes" : [
+    "a"
+    ]
+        ] as [String : Any]
+    
+    private var person7 = [
+    "id" : "520",
+    "friends" : [
+    "514",
+    "515",
+    "516"
+    ],
+    "name" : "bacd",
+    "likes" : [
+    "a",
+    "b",
+    "c",
+    "d"
+    ]
+        ] as [String : Any]
+
     var currentUser: String?
     var users = [User:String]()
-    var items = [Item:String]()
+    //var items = [Item:String]()
+    
+    func getDummyData() -> [String:Any] {
+        
+        
+         let file = Bundle.main.url(forResource: "jsondummies.json", withExtension: "json")
+        
+        print(file)
+        
+        let data = try! Data(contentsOf: file!)
+        let json = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+        return json
+    }
+    
     func getItems(numItems: Int, callback: (Array<Item>)->()) {
         //GET /items {i}
     }
+    
     
     //func getLikes(item: Item, callback: (Array<String>) -> ()) {
         
