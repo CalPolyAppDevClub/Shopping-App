@@ -180,7 +180,8 @@ class APIWrapper {
         for user in users {
             let userId = user["id"]!
             let username = user["username"]!
-            self.users[User(username: username)] = userId
+            let name = user["name"]!
+            self.users[User(id: userId, username: username, name: name)] = userId
         }
         
     }

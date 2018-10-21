@@ -12,7 +12,7 @@ Item:
  likedBy: [String],
  boughtBy: [String],
  category: String
- }
+}
 
 GET /user
 Params:

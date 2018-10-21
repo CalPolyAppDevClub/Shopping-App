@@ -1,5 +1,5 @@
 //
-//  buzzEntry.swift
+//  BuzzEntry.swift
 //  ShoppingApp
 //
 //  Created by Garrett Wayne on 10/14/18.
