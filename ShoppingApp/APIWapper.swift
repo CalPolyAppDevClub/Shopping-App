@@ -2,24 +2,25 @@
 import Foundation
 class APIWrapper {
     var currentUser: String?
-    var userIdentifier: [User:String] = [User:String]()
+    var users = [User:String]()
+    var items = [Item:String]()
     func getItems(numItems: Int, callback: (Array<Item>)->()) {
-
+        //GET /items {i}
     }
     
-    func getLikes(item: Item, callback: (Array<String>) -> ()) {
+    //func getLikes(item: Item, callback: (Array<String>) -> ()) {
+        
+    //}
+    
+    
+    //error: String
+    func buy(item: Item, callback: (String?) -> ()) {
         
     }
     
     
     //error: String
-    func buy(item: Item, callback: (String?)->()) {
-        
-    }
-    
-    
-    //error: String
-    func like(item: Item, callback: (String?)->()) {
+    func like(item: Item, callback: (String?) -> ()) {
         
     }
     
@@ -35,7 +36,7 @@ class APIWrapper {
         for user in users {
             let userId = user["id"]!
             let username = user["username"]!
-            self.userIdentifier[User(username: username)] = userId
+            self.users[User(username: username)] = userId
         }
         
     }
@@ -50,6 +51,11 @@ class APIWrapper {
         
     }
     
+    func addReview(review: Review, callback: (String?) -> ()) {
+        
+    }
     
-    
+    func getReviews(item: Item, amount: Int, callback: (Array<Review>) -> ()) {
+        
+    }
 }
