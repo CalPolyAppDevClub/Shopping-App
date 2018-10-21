@@ -44,7 +44,7 @@ def makeUser(start, id, users, names):
     friends = [str(x) for x in friends]
     num_likes = random.randint(0, len(likes))
     like_l = likes[:num_likes]
-    construction = "{\n\t" + "\"id\" : \"{}\",\n{},\n\t\"name\" : \"{}\",\n{},\n".format(
+    construction = "{\n\t" + "\"id\" : \"{}\",\n{},\n\t\"name\" : \"{}\",\n{}\n".format(
         id, make_json_array("friends", friends), name, make_json_array("likes",like_l)) + "}"
     return construction
 
