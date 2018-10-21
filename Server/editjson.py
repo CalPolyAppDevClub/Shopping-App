@@ -52,7 +52,7 @@ def makeUser(start, id, users, names):
 def makeDummies(num):
     alpha = "abcdefghijklmnopqrstuvwxyz"
     names = perm_gen_lex(alpha[:rev_factorial(num)])
-    with open("Desktop/jsondummies.json", 'w') as f:
+    with open("jsondummies.json", 'w') as f:
         ids = list(map(lambda x: str(x), list(range(514, 515 + num))))
         totalStr = ''
         for i, id in enumerate(ids):
