@@ -134,19 +134,7 @@ class APIWrapper {
     var currentUser: String?
     var users = [User:String]()
     //var items = [Item:String]()
-    
-    func getDummyData() -> [String:Any] {
-        
-        
-         let file = Bundle.main.url(forResource: "jsondummies.json", withExtension: "json")
-        
-        print(file)
-        
-        let data = try! Data(contentsOf: file!)
-        let json = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-        return json
-    }
-    
+
     func getItems(numItems: Int, callback: (Array<Item>)->()) {
         //GET /items {i}
     }
