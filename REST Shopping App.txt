@@ -1,0 +1,57 @@
+User:
+{id: String,
+ friends: [String],
+ name: String,
+ Items: [String],
+ Likes: [String],
+}
+
+Item: 
+{id: String,
+ name: String,
+ likedBy: [String],
+ boughtBy: [String],
+ category: String
+}
+
+GET /user
+Params:
+{id: String}
+
+Returns:
+{user: User}
+
+
+Errors:
+{invalidId: String}
+
+GET /users
+Params:
+{ids: [String]}
+
+Returns:
+{users: [User]}
+
+Error:
+{invalidId: [String]}
+
+GET /item
+
+Params:
+{Id: String}
+
+Returns:
+{item: Item}
+
+Error:
+{invalidId: String}
+
+GET /items
+Params:
+{ids: [String]}
+
+Returns:
+{items: [Item]}
+
+Error:
+{invalidId: String}
